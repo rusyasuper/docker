@@ -1,0 +1,42 @@
+{% extends 'bootstrap/base.html' %}
+
+{% block content %}
+{% include "header.html" %}
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('{{ url_for('static', filename='img/edit-bg.jpg')}}')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="page-heading">
+            <h1>New Post</h1>
+            <span class="subheading">You're going to make a great blog post!</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <form action="/action_page" method="POST">
+          <label>Title</label>
+          <input type="text" name="Title">
+          <label>Subtitle</label>
+          <input type="text" name="Subtitle">
+          <label>Date</label>
+          <input type="text" name="Date">
+          <label>Body</label>
+          <input type="text" name="Body">
+          <label>Autor</label>
+          <input type="text" name="Author">
+          <label>Img_url</label>
+          <input type="text" name="Img_url">
+          <button type="submit">Add Book</button>
+    </form>
+      </div>
+    </div>
+  </div>
+{% include "footer.html" %}
+{% endblock %}

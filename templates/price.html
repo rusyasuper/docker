@@ -1,0 +1,176 @@
+{% include "header.html" %}
+<div class="modal" id="module1" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Заявка на одиночную фотосессию</h5>
+        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Закрыть" aria-hidden="true">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="box">
+            <form action="/action_page1" method="post">
+                <h6>Введите свое имя</h6>
+                <input type="text" maxlength="15" name="name" placeholder="Введите ваше имя" required="required"/>
+                <h6>Введите номер телефона</h6>
+                <input type="text" maxlength="12" name="number" placeholder="+79990000000" required="required"/>
+                <h6>Опишите вкратце желаемый тип съемки</h6>
+                <input type="text" maxlength="50" name="opisanie" placeholder="Одиночная фотосессия" required="required" style="padding-top: 50px"/>
+                <button type="submit" class="btn btn-primary btn-block btn-large">Оставить заявку.</button>
+            </form>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" aria-hidden="true">Закрыть</button>
+        <button type="button" class="btn btn-primary">Сохранить изменения</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal" id="module2" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Заявка на съемку мероприятия</h5>
+        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Закрыть" aria-hidden="true">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="box">
+            <form action="/action_page2" method="post">
+                <h6>Введите свое имя</h6>
+                <input type="text" maxlength="15" name="name" placeholder="Введите ваше имя" required="required"/>
+                <h6>Введите номер телефона</h6>
+                <input type="text" maxlength="12" name="number" placeholder="+79990000000" required="required"/>
+                <h6>Опишите вкратце желаемый тип съемки</h6>
+                <input type="text" maxlength="50" name="opisanie" placeholder="Одиночная фотосессия" required="required" style="padding-top: 50px"/>
+                <button type="submit" class="btn btn-primary btn-block btn-large">Оставить заявку.</button>
+            </form>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" aria-hidden="true">Закрыть</button>
+        <button type="button" class="btn btn-primary">Сохранить изменения</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal" id="module3" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Заявка на другие съемки</h5>
+        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Закрыть" aria-hidden="true">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="box">
+            <form action="/action_page3" method="post">
+                <h6>Введите свое имя</h6>
+                <input type="text" maxlength="15" name="name" placeholder="Введите ваше имя" required="required"/>
+                <h6>Введите номер телефона</h6>
+                <input type="text" maxlength="12" name="number" placeholder="+79990000000" required="required"/>
+                <h6>Опишите вкратце желаемый тип съемки</h6>
+                <input type="text" maxlength="50" name="opisanie" placeholder="Одиночная фотосессия" required="required" style="padding-top: 50px"/>
+                <button type="submit" class="btn btn-primary btn-block btn-large">Оставить заявку.</button>
+            </form>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" aria-hidden="true">Закрыть</button>
+        <button type="button" class="btn btn-primary">Сохранить изменения</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-fluid bg-light text-center" style="padding-top: 50px; padding-bottom: 200px; width: 100%; background-image: url('{{ url_for('static', filename='img/coins.png')}}')">
+    <p class="h1 font-weight-bold text-white" style="padding-top: 70px">Цены на услуги</p>
+    <div class="row row-cols-1 row-cols-md-3 mb-3 text-center" style="padding-top: 50px">
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <p class="warning">{{ message }}</p>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm">
+                <div class="card-header py-3">
+                    <h4 class="my-0 fw-normal font-weight-bold">Одиночная фотосессия</h4>
+                </div>
+                <div class="card-body">
+                    <h1 class="card-title pricing-card-title font-weight-bold">700₽<small class="text-muted fw-light">/час</small></h1>
+                    <ul class="list-unstyled mt-3 mb-4">
+                        <li class="text-muted fw-light">700₽/час</li>
+                        <li class="text-muted fw-light">возможность обработки 200$ за фото</li>
+                        <li class="text-muted fw-light">съемка на выбранной вами локации или нет</li>
+                    </ul>
+                        <button type="button" id="btn1" class="w-100 btn btn-lg btn-dark">оставить заявку</button>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm">
+                <div class="card-header py-3">
+                    <h4 class="my-0 fw-normal font-weight-bold">Съемка мероприятий</h4>
+                </div>
+                <div class="card-body">
+                    <h1 class="card-title pricing-card-title font-weight-bold">1000₽<small class="text-muted fw-light font-weight-bold">/час</small></h1>
+                    <ul class="list-unstyled mt-3 mb-4">
+                        <li class="text-muted fw-light">1000₽/час</li>
+                        <li class="text-muted fw-light">Свадьбы, торжества, дни рождения</li>
+                        <li class="text-muted fw-light">возможность обработки 200$ за фото</li>
+                    </ul>
+                    <button type="button" id="btn2" class="w-100 btn btn-lg btn-dark">Оставить заявку</button>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm">
+                <div class="card-header py-3">
+                    <h4 class="my-0 fw-normal font-weight-bold">Прочее</h4>
+                </div>
+                <div class="card-body">
+                    <h1 class="card-title pricing-card-title font-weight-bold">По договоренности<small class="text-muted fw-light font-weight-bold"></small></h1>
+                    <ul class="list-unstyled mt-3 mb-4">
+                        <li class="text-muted fw-light">10000$/фото</li>
+                        <li class="text-muted fw-light">ХОЧУ ХОЧУ ХОЧУ</li>
+                        <li class="text-muted fw-light">ХОЧУ ХОЧУ ХОЧУ</li>
+                    </ul>
+                    <button type="button" id="btn3" class="w-100 btn btn-lg btn-dark">Оставить заявку</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <p></p>
+    </div>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const btn = document.querySelector('#btn1');
+  const modal = new bootstrap.Modal(document.querySelector('#module1'));
+  btn.addEventListener('click', function() {
+    modal.show();
+  });
+
+});
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const btn = document.querySelector('#btn2');
+  const modal = new bootstrap.Modal(document.querySelector('#module2'));
+  btn.addEventListener('click', function() {
+    modal.show();
+  });
+
+});
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const btn = document.querySelector('#btn3');
+  const modal = new bootstrap.Modal(document.querySelector('#module3'));
+  btn.addEventListener('click', function() {
+    modal.show();
+  });
+
+});
+</script>
+{% include "footer.html" %}

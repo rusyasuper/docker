@@ -1,0 +1,78 @@
+{% include "header.html" %}
+<link rel="stylesheet" href="static/assets/css/main.css" />
+<noscript><link rel="stylesheet" href="static/assets/css/noscript.css" /></noscript>
+		<!-- Wrapper -->
+<div id="wrapper" style="padding-top: 50px; padding-bottom: 50px; background-image: url('{{ url_for('static', filename='img/astronomy.jpg')}}')">
+	<div id="main">
+		<div class="inner">
+			<header>
+				<h1 class="font-weight-bold text-white">Примеры моих работ :3</h1>
+				<p class="font-italic text-white">Здесь вы можете ознакомиться с некоторыми моими работами</p>
+			</header>
+			<section class="tiles">
+				<article class="style1">
+					<span class="image">
+						<img src="static/img/sport.jpg" style="height: 550px; weight: 962px">
+					</span>
+					<a href="generic.html">
+						<h2>Мальчик</h2>
+					</a>
+				</article>
+				<article class="style2">
+					<span class="image">
+						<img src="static/img/baby.jpg" style="height: 550px; weight: 962px">
+					</span>
+					<a href="generic.html">
+						<h2>Baby</h2>
+					</a>
+				</article>
+				<article class="style3">
+					<span class="image">
+						<img src="static/img/brother.jpg" style="height: 550px; weight: 962px" />
+					</span>
+					<a href="generic.html">
+						<h2>Bro</h2>
+					</a>
+				</article>
+				<article class="style4">
+					<span class="image">
+						<img src="static/img/hny2.jpg" style="height: 550px; weight: 962px" />
+					</span>
+					<a href="generic.html">
+						<h2>hny2</h2>
+					</a>
+				</article>
+				<article class="style5">
+					<span class="image">
+						<img src="static/img/girl.jpg" style="height: 550px; weight: 962px" />
+					</span>
+					<a href="generic.html">
+						<h2>girl</h2>
+					</a>
+				</article>
+				<article class="style6">
+					<span class="image">
+						<img src="static/img/widding.jpg" style="height: 550px; weight: 962px" />
+					</span>
+					<a href="generic.html">
+						<h2>wedding</h2>
+					</a>
+				</article>
+			</section>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col text-right">
+                    <a class="w-35 btn-lg btn-primary text-center" href="/gallery">Back</a>
+		</div>
+		<div class="col text-left">
+                    <a class="w-35 btn-lg btn-primary text-center" href="/">Home</a>
+		</div>
+	</div>
+</div>
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+	{% include "footer.html" %}
