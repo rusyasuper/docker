@@ -2,10 +2,10 @@
 FROM python:3.9
 
 # Set the working directory in the container
-WORKDIR /app
+WORKDIR /main.py
 
 # Copy the application files into the working directory
-COPY . /app
+COPY . /main.py
 
 ADD https://github.com/rusyasuper/Arrina
 
