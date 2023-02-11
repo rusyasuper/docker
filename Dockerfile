@@ -2,12 +2,8 @@
 FROM python:3.9
 
 # Set the working directory in the container
-WORKDIR /main.py
+WORKDIR https://github.com/rusyasuper/Arrina
 
-# Copy the application files into the working directory
-COPY . /main.py
-
-ADD https://github.com/rusyasuper/Arrina
 
 # Install the application dependencies
 RUN pip install -r requirements.txt
