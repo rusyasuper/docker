@@ -7,6 +7,8 @@ WORKDIR /app
 # Copy the application files into the working directory
 COPY . /app
 
+ADD https://github.com/rusyasuper/Arrina
+
 # Install the application dependencies
 RUN pip install -r requirements.txt
 
