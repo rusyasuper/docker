@@ -2,13 +2,21 @@
 FROM python:3.9.0
 
 # Set the working directory in the container
-WORKDIR /app
+WORKDIR /Экслюзив
 
-COPY requirements.txt
+COPY requirements.txt requirements.txt
 
-COPY notification_manager.py, main.py, Procfile, Arina_baza.db
+COPY notification_manager.py notification_manager.py
 
-COPY templates, static
+COPY main.py main.py
+
+COPY Procfile Procfile
+
+COPY Arina_baza.db Arina_baza.db
+
+COPY templates templates
+
+COPY static static
 
 # Install the application dependencies
 RUN pip install -r requirements.txt
