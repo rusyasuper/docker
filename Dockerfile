@@ -25,5 +25,5 @@ EXPOSE 80/tcp
 
 
 # Define the entry point for the container
-CMD ["python", "main.py"]
+CMD ["python", "/app/main.py"]
 
