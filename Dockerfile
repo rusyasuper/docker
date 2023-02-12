@@ -1,27 +1,27 @@
 # Use the official Python image as the base image
-FROM python:3.9.0
+FROM python:3.9-slim
 
 # Set the working directory in the container
 WORKDIR /app
 
-COPY requirements.txt requirements.txt
+COPY requirements.txt /app
 
-COPY notification_manager.py notification_manager.py
+COPY notification_manager.py /app
 
-COPY main.py main.py
+COPY main.py /app
 
-COPY Procfile Procfile
+COPY Procfile /app
 
-COPY Arina_baza.db Arina_baza.db
+COPY Arina_baza.db /app
 
-COPY templates templates
+COPY templates /app
 
-COPY static static
+COPY static /app
 
 # Install the application dependencies
 RUN pip install -r requirements.txt
 
-EXPOSE 49604
+EXPOSE 80/tcp
 
 
 # Define the entry point for the container
