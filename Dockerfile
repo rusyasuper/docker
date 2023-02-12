@@ -25,5 +25,5 @@ EXPOSE 49604
 
 
 # Define the entry point for the container
-CMD ["python", "./main.py"]
+CMD ["python", "main.py"]
 
