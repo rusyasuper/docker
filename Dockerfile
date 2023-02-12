@@ -23,7 +23,7 @@ RUN pip install -r requirements.txt
 
 EXPOSE 80/tcp
 
-RUN gunicorn -b 82.148.28.32:80 server:app
+RUN gunicorn -b 82.148.28.32:80 main:app
 
 ## Define the entry point for the container
 #CMD ["python", "/app/main.py"]
