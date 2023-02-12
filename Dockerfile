@@ -2,7 +2,7 @@
 FROM python:3.9.0
 
 # Set the working directory in the container
-WORKDIR /Экслюзив
+WORKDIR /app
 
 COPY requirements.txt requirements.txt
 
