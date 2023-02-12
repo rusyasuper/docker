@@ -21,7 +21,7 @@ COPY static static
 # Install the application dependencies
 RUN pip install -r requirements.txt
 
-EXPOSE 8000
+EXPOSE 49604
 
 
 # Define the entry point for the container
