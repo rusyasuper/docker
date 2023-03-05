@@ -1,7 +1,7 @@
 {% include "header.html" %}
         <div class="container-fluid text-center" style="padding-bottom: 100px; weight: 100% !important; background-image: url('{{ url_for('static', filename='img/flora.jpg')}}')">
             <div class="container-fluid text-center" style="padding-top: 50px; padding-bottom: 50px">
-                <p style="margin-top: 140px" class="text-center text-white h1 font-italic">Привет! Я Арина и Я обожаю фотографию и все, что с этим связано. Первый раз я взяла камеру в руки в пять лет и, видимо, в тот момент между нами произошла волшебная связь. Спустя 10 лет у меня в руках появился настоящий профессиональный фотоаппарат. С этого момента и начался мой творческий путь. Буду безумно рада раскрыть вашу красоту, сохранить яркие события, превратить их в воспоминания, которые напомнят вам о красоте вашей жизни. Фотографирую как людей, так и животных, детей, природу, провожу съемку мероприятий. Всегда рада новым клиентам!</p>
+                <p style="margin-top: 140px; font-size: calc(10px + 1.7vw)" class="text-center text-white font-italic">Привет! Я Арина и Я обожаю фотографию и все, что с этим связано. Первый раз я взяла камеру в руки в пять лет и, видимо, в тот момент между нами произошла волшебная связь. Спустя 10 лет у меня в руках появился настоящий профессиональный фотоаппарат. С этого момента и начался мой творческий путь. Буду безумно рада раскрыть вашу красоту, сохранить яркие события, превратить их в воспоминания, которые напомнят вам о красоте вашей жизни. Фотографирую как людей, так и животных, детей, природу, провожу съемку мероприятий. Всегда рада новым клиентам!</p>
                 {% with messages = get_flashed_messages(with_categories=true) %}
                     {% for category, message in messages %}
                         <div class="{{ category }}">{{ message }}</div>
@@ -10,7 +10,7 @@
             </div>
         </div>
         <div class="container-fluid text-center" style="padding-top: 50px; padding-bottom: 50px; weight: 100% !important; background-image: url('{{ url_for('static', filename='img/panorama1.jpg')}}')">
-            <div id="demo" class="carousel slide" data-ride="carousel" style="margin-top: 50px">
+            <div id="demo" class="carousel slide d-none d-lg-block" data-ride="carousel" style="margin-top: 50px">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <img class="img-fluid" style="height: 688px !important; weight: 467px !important" src="static/img/girl2.jpg"></img>
